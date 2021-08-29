@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>womens handbag</title>
+    <link rel="stylesheet" href="./css/style2.css" />
+</head>
+<body>
+<section>
+<ul>
+<li class="list active" data-filter="all">All</li>
+<li class="list" data-filter="purse">Purse</li>
+<li class="list" data-filter="handbag">HandBag</li>
+<li class="list" data-filter="backpacks">Backpack</li>
+</ul>
+<div class ="product">
+<div class ="itembox purse"><img src="./images/p1.jpeg"></div>
+<div class ="itembox handbag"><img src="./images/hb1.jpeg"></div>
+<div class ="itembox backpacks"><img src="./images/bp1.jpeg"></div>
+<div class ="itembox purse"><img src="./images/p2.jpeg"></div>
+<div class ="itembox handbag"><img src="./images/hb2.jpeg"></div>
+<div class ="itembox backpacks"><img src="./images/bp2.jpeg"></div>
+<div class ="itembox purse"><img src="./images/p3.jpeg"></div>
+<div class ="itembox handbag"><img src="./images/hb3.jpeg"></div>
+<div class ="itembox backpacks"><img src="./images/bp3.jpeg"></div>
+<div class ="itembox purse"><img src="./images/p4.jpeg"></div>
+<div class ="itembox handbag"><img src="./images/hb4.jpeg"></div>
+<div class ="itembox backpacks"><img src="./images/bp4.jpeg"></div>
+<div class ="itembox purse"><img src="./images/p5.jpeg"></div>
+<div class ="itembox handbag"><img src="./images/hb5.jpeg"></div>
+<div class ="itembox backpacks"><img src="./images/bp5.jpeg"></div>
+<div class ="itembox purse"><img src="./images/p6.jpeg"></div>
+<div class ="itembox handbag"><img src="./images/hb6.jpeg"></div>
+<div class ="itembox backpacks"><img src="./images/bp6.jpeg"></div>
+</div>
+</section>
+<script src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('.list').click(function(){
+const value = $(this).attr('data-filter');
+if(value == 'all')
+{
+$('.itembox').not('.'+value).show('1000');
+}
+else
+{
+$('.itembox').not('.'+value).hide('1000');
+$('.itembox').filter('.'+value).show('1000');
+}
+})
+$('.list').click(function(){
+$(this).addClass('active').siblings().removeClass('active');
+})
+})
+</script>
+
+</body>
+</html>
